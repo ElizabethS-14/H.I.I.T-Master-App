@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HIITMasterApp">
         <activity
+            android:name=".GetStarted"
+            android:exported="false" />
+        <activity
             android:name=".GoalPage"
             android:exported="false" />
         <activity
