@@ -43,5 +43,12 @@
         tools:layout_editor_absoluteX="53dp"
         tools:layout_editor_absoluteY="557dp" />
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gif"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-43dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

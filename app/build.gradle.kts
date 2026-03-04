@@ -33,11 +33,13 @@ android {
 
 dependencies {
 
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
+    implementation("pl.droidsonroids.gif:android-gif-drawable:1.1.17")
     androidTestImplementation(libs.espresso.core)
 }
