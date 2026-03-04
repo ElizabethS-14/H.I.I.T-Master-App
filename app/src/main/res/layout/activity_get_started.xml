@@ -32,16 +32,17 @@
         android:layout_height="wrap_content"
         android:text=" Name"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="417dp" />
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="418dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Arrow"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="578dp" />
+
+    <ImageView
+        android:id="@+id/Arrow"
+        android:layout_width="474dp"
+        android:layout_height="521dp"
+        app:srcCompat="@drawable/arrow_button_picsart_backgroundremover"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="355dp" />
 
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
