@@ -1,5 +1,10 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
+
+
 }
 
 android {
@@ -32,14 +37,15 @@ android {
 }
 
 dependencies {
-
-
+    implementation("com.google.firebase:firebase-analytics")
+    implementation(platform("com.google.firebase:firebase-bom:34.9.0"))
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
-    implementation("pl.droidsonroids.gif:android-gif-drawable:1.1.17")
+    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.31")
     androidTestImplementation(libs.espresso.core)
 }
