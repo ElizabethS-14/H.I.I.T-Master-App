@@ -1,5 +1,7 @@
 package edu.bpi.hiitmasterapp;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;

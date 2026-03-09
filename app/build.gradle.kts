@@ -48,4 +48,7 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.31")
     androidTestImplementation(libs.espresso.core)
+
+    implementation(platform("com.google.firebase:firebase-bom:34.10.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }
