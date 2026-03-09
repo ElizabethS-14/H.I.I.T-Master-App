@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HIIT Master App</string>
+    <string name="underlined_text_string">This is an <u>underlined</u> text.</string>
 </resources>
