@@ -22,7 +22,7 @@ public class GetStarted extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_get_started);
 
         Arrow = (ImageView)findViewById(R.id.Arrow);
