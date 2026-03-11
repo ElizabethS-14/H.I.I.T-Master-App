@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class GetStarted extends AppCompatActivity {
 
-    ImageView Arrow;
+    ImageView imageView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +25,9 @@ public class GetStarted extends AppCompatActivity {
         //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_get_started);
 
-        Arrow = (ImageView)findViewById(R.id.Arrow);
+        imageView3 = (ImageView)findViewById(R.id.imageView3);
 
-        Arrow.setOnClickListener(new View.OnClickListener() {
+        imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GetStarted.this, MainActivity.class);
