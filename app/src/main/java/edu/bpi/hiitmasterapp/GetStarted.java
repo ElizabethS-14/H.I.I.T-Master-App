@@ -30,7 +30,7 @@ public class GetStarted extends AppCompatActivity {
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GetStarted.this, MainActivity.class);
+                Intent intent = new Intent(GetStarted.this, GoalPage.class);
                 startActivity(intent);
             }
         });
