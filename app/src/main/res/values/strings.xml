@@ -1,4 +1,29 @@
 <resources>
     <string name="app_name">HIIT Master App</string>
     <string name="underlined_text_string">This is an <u>underlined</u> text.</string>
+    <!--This is the first drop down mention-->
+    <string name="option1_name">goal1DropDown</string>
+    <string-array name="Goal1">
+        <item>Option1</item>
+        <item>Option2</item>
+        <item>Option3</item>
+        <item>Option4</item>
+    </string-array>
+    <!--This is the second drop down mention-->
+    <string name="option2_name">goal2DropDown</string>
+    <string-array name="Goal2">
+        <item>Option1</item>
+        <item>Option2</item>
+        <item>Option3</item>
+        <item>Option4</item>
+    </string-array>
+
+    <!--This is the third drop down mention-->
+    <string name="option3_name">goal2DropDown</string>
+    <string-array name="Goal3">
+        <item>Option1</item>
+        <item>Option2</item>
+        <item>Option3</item>
+        <item>Option4</item>
+    </string-array>
 </resources>
