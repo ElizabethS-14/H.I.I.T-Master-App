@@ -13,13 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HIITMasterApp">
         <activity
+            android:name=".GetStarted"
+            android:exported="false" />
+        <activity
             android:name=".Workouts"
             android:exported="false" />
         <activity
             android:name=".Dashboard"
             android:exported="false" />
         <activity
-            android:name=".GetStarted"
+            android:name=".Home"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
