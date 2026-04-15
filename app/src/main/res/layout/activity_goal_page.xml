@@ -1,359 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F0F0F"
-    android:fitsSystemWindows="true"
-    tools:context=".GoalPage">
+    android:background="@color/fit_dark">
 
-    <!-- ── Header ── -->
-    <LinearLayout
-        android:id="@+id/header"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:padding="6dp"
-            />
-            <!--android:src="@drawable/ic_zap"-->
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="FitTrack"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <!-- ── AI Speaker ── -->
-    <TextView
-        android:id="@+id/aiSpeaker"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:padding="12dp"
-        android:text="Pick your goals to get started 🎯"
-        android:textColor="#AAAAAA"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header" />
-
-    <!-- ── Scrollable Body ── -->
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toTopOf="@id/bottomContainer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/aiSpeaker">
+        android:layout_height="match_parent"
+        android:paddingBottom="120dp"
+        android:clipToPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
 
-            <!-- Badge -->
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="52dp"
+                android:paddingBottom="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/fit_red"
+                    app:cardElevation="0dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="⚡"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FitTrack"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_marginStart="10dp" />
+            </LinearLayout>
+
+            <!-- Badge + Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="12dp"
-                android:paddingTop="6dp"
-                android:paddingEnd="12dp"
-                android:paddingBottom="6dp"
-                android:text="SET YOUR GOALS"
-                android:textColor="#FF4757"
+                android:text="● SET YOUR GOALS"
+                android:textColor="@color/fit_red"
                 android:textSize="11sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:background="@drawable/bg_pill_red"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="16dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:text="What are you\ntraining for?"
-                android:textColor="#FFFFFF"
-                android:textSize="28sp"
-                android:textStyle="bold" />
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                android:fontFamily="sans-serif-black"
+                android:lineSpacingMultiplier="0.95"
+                android:layout_marginBottom="8dp" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Define your 3 goals to personalise your experience."
+                android:textColor="@color/white_40"
+                android:textSize="14sp"
+                android:layout_marginBottom="28dp" />
+
+            <!-- Goal Card 1: Fitness Goal -->
+            <include layout="@layout/item_goal_card"
+                android:id="@+id/card_fitness_goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Goal Card 2: Weekly Commitment -->
+            <include layout="@layout/item_goal_card"
+                android:id="@+id/card_commitment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Goal Card 3: Experience Level -->
+            <include layout="@layout/item_goal_card"
+                android:id="@+id/card_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Progress Dots -->
+            <LinearLayout
+                android:id="@+id/ll_progress_dots"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Define your 3 goals to personalise your experience."
-                android:textColor="#808080"
-                android:textSize="14sp" />
-
-            <!-- ════ GOAL CARD 1 — Fitness Goal ════ -->
-            <LinearLayout
-                android:id="@+id/card1"
-                android:textColor="#FF4757"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:padding="8dp"/>
-                        <!--android:src="@drawable/ic_target" -->
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="GOAL 1"
-                            android:textColor="#666666"
-                            android:textSize="10sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Fitness Goal"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/check1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:visibility="gone" />
-                        <!--android:src="@drawable/ic_check"-->
-
-                </LinearLayout>
-
-                <Spinner
-                    android:id="@+id/spinner1"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="16dp"
-                    android:spinnerMode="dropdown" />
-            </LinearLayout>
-
-            <!-- ════ GOAL CARD 2 — Weekly Commitment ════ -->
-            <LinearLayout
-                android:id="@+id/card2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:padding="8dp"/>
-                        <!--android:src="@drawable/ic_target" -->
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="GOAL 2"
-                            android:textColor="#666666"
-                            android:textSize="10sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Weekly Commitment"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/check2"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:visibility="gone" />
-                        <!--android:src="@drawable/ic_check"-->
-
-                </LinearLayout>
-
-                <Spinner
-                    android:id="@+id/spinner2"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="16dp"
-                    android:spinnerMode="dropdown" />
-            </LinearLayout>
-
-            <!-- ════ GOAL CARD 3 — Experience Level ════ -->
-            <LinearLayout
-                android:id="@+id/card3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:padding="8dp"/>
-                        <!--android:src="@drawable/ic_target"-->
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="GOAL 3"
-                            android:textColor="#666666"
-                            android:textSize="10sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Experience Level"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/check3"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:visibility="gone" />
-                        <!--android:src="@drawable/ic_check"-->
-
-                </LinearLayout>
-
-                <Spinner
-                    android:id="@+id/spinner3"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="16dp"
-                    android:spinnerMode="dropdown" />
-            </LinearLayout>
-
-            <!-- ── Progress Dots ── -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp">
 
-                <View
-                    android:id="@+id/dot1"
-                    android:layout_width="8dp"
-                    android:layout_height="8dp" />
-
-                <View
-                    android:id="@+id/dot2"
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
-                    android:layout_marginStart="8dp" />
-
-                <View
-                    android:id="@+id/dot3"
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
-                    android:layout_marginStart="8dp" />
+                <View android:id="@+id/dot1"
+                    android:layout_width="8dp" android:layout_height="8dp"
+                    android:background="@drawable/circle_dim"
+                    android:layout_marginEnd="6dp" />
+                <View android:id="@+id/dot2"
+                    android:layout_width="8dp" android:layout_height="8dp"
+                    android:background="@drawable/circle_dim"
+                    android:layout_marginEnd="6dp" />
+                <View android:id="@+id/dot3"
+                    android:layout_width="8dp" android:layout_height="8dp"
+                    android:background="@drawable/circle_dim" />
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-    <!-- ── Bottom Bar ── -->
+    <!-- Bottom CTA -->
     <LinearLayout
-        android:id="@+id/bottomContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:orientation="vertical"
-        android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:background="@color/fit_dark"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="32dp">
 
         <Button
-            android:id="@+id/continueButton"
+            android:id="@+id/btn_continue"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:alpha="0.4"
-            android:enabled="false"
-            android:text="Continue to Dashboard"
-            android:textColor="#FFFFFF"
+            android:text="Continue to Dashboard →"
+            android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:background="@drawable/btn_red_ripple"
+            android:enabled="false"
+            android:alpha="0.4" />
 
         <TextView
-            android:id="@+id/warningText"
+            android:id="@+id/tv_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="12dp"
             android:text="Select all 3 goals to continue"
-            android:textColor="#4D4D4D"
-            android:textSize="12sp" />
+            android:textColor="@color/white_40"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
 
-    <!-- ── AI Chat FAB ── -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/aiChatFab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-
-        app:backgroundTint="#3B82F6"
-        app:layout_constraintBottom_toTopOf="@id/bottomContainer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:tint="#FFFFFF" />
-    <!--android:src="@drawable/ic_chat"-->
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

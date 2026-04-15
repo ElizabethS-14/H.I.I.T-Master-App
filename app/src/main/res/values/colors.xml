@@ -2,4 +2,32 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- FitTrack Brand Colors -->
+    <color name="fit_red">#E53935</color>
+    <color name="fit_red_dark">#B71C1C</color>
+    <color name="fit_red_light">#EF9A9A</color>
+    <color name="fit_red_alpha">#33E53935</color>
+
+    <color name="fit_blue">#2979FF</color>
+    <color name="fit_blue_dark">#1565C0</color>
+    <color name="fit_blue_alpha">#332979FF</color>
+
+    <color name="fit_dark">#0F0F0F</color>
+    <color name="fit_dark_surface">#1A1A1A</color>
+    <color name="fit_dark_card">#1E1E1E</color>
+    <color name="fit_dark_elevated">#252525</color>
+
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="white_10">#1AFFFFFF</color>
+    <color name="white_05">#0DFFFFFF</color>
+
+    <color name="green_accent">#4CAF50</color>
+    <color name="orange_accent">#FF9800</color>
+    <color name="purple_accent">#9C27B0</color>
+
+    <!-- Status bar & navigation -->
+    <color name="status_bar_color">#0F0F0F</color>
 </resources>

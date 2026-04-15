@@ -1,284 +1,253 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B1B2F"
+    android:background="@color/fit_dark"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="24dp"
-        android:paddingTop="48dp"
-        android:paddingBottom="40dp">
+        android:paddingBottom="24dp">
 
-        <!-- Logo row -->
+        <!-- Header Logo -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="40dp">
+            android:paddingStart="24dp"
+            android:paddingTop="52dp"
+            android:paddingEnd="24dp"
+            android:gravity="center_vertical">
 
-            <TextView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="#5F10A4"
-                android:backgroundTint="#0F62DC"
-                android:gravity="center"
-                android:text="⚡"
-                android:textColor="#64B5F6"
-                android:textSize="16sp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/fit_red"
+                app:cardElevation="0dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="⚡"
+                    android:gravity="center"
+                    android:textSize="18sp" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="H. I. I. T. MASTER"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:text="FitTrack"
+                android:textColor="@color/white"
+                android:textSize="22sp"
                 android:textStyle="bold"
-                android:layout_marginStart="8dp" />
+                android:fontFamily="sans-serif-black"
+                android:layout_marginStart="10dp" />
         </LinearLayout>
 
-        <!-- Badge -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:background="#33FFFFFF"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="5dp"
-            android:text="● START YOUR JOURNEY"
-            android:textColor="#E53935"
-            android:textSize="11sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-
-        <!-- Headline line 1 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Train Smarter."
-            android:textColor="#FFFFFF"
-            android:textSize="42sp"
-            android:textStyle="bold"
-            android:lineSpacingMultiplier="1.05" />
-
-        <!-- Headline line 2 -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Push"
-                android:textColor="#E53935"
-                android:textSize="42sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" Harder."
-                android:textColor="#1E88E5"
-                android:textSize="42sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <!-- Subheadline -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="The only fitness companion you'll ever need. Build strength, track progress, and crush every goal."
-            android:textColor="#99FFFFFF"
-            android:textSize="16sp"
-            android:lineSpacingMultiplier="1.6"
-            android:layout_marginBottom="32dp" />
-
-        <!-- Feature 1 -->
+        <!-- Hero Content -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="12dp">
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="40dp">
+
+            <!-- Badge -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="✓"
-                android:textColor="#1E88E5"
-                android:textSize="16sp"
-                android:layout_marginEnd="12dp" />
+                android:text="● Start Your Journey"
+                android:textColor="@color/fit_red"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:background="@drawable/bg_pill"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Headline -->
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_headline"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Personalized workout plans"
-                android:textColor="#CCFFFFFF"
-                android:textSize="14sp" />
-        </LinearLayout>
+                android:text="Train Smarter.\nPush Harder."
+                android:textColor="@color/white"
+                android:textSize="44sp"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="-0.02"
+                android:lineSpacingMultiplier="0.95"
+                android:layout_marginBottom="16dp" />
 
-        <!-- Feature 2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="12dp">
+            <!-- Subtitle -->
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="✓"
-                android:textColor="#1E88E5"
-                android:textSize="16sp"
-                android:layout_marginEnd="12dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Track every rep &amp; set"
-                android:textColor="#CCFFFFFF"
-                android:textSize="14sp" />
-        </LinearLayout>
+                android:text="The only fitness companion you'll ever need. Build strength, track progress, and crush every goal."
+                android:textColor="@color/white_60"
+                android:textSize="15sp"
+                android:lineSpacingMultiplier="1.4"
+                android:layout_marginBottom="32dp" />
 
-        <!-- Feature 3 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="40dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="✓"
-                android:textColor="#1E88E5"
-                android:textSize="16sp"
-                android:layout_marginEnd="12dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Real-time progress analytics"
-                android:textColor="#CCFFFFFF"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <!-- Get Started button -->
-        <Button
-            android:id="@+id/btn_get_started"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="Get Started →"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:backgroundTint="#E53935"
-            android:layout_marginBottom="12dp" />
-
-        <!-- Sign In button -->
-        <Button
-            android:id="@+id/btn_sign_in"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="Sign In"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:backgroundTint="#33FFFFFF"
-            android:layout_marginBottom="40dp" />
-
-        <!-- Stats bar -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#1AFFFFFF"
-            android:baselineAligned="false">
-
-            <!-- Athletes -->
+            <!-- Feature List -->
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="40dp">
+
+                <include
+                    layout="@layout/item_feature"
+                    android:id="@+id/feature_1" />
+
+
+                <include
+                    layout="@layout/item_feature"
+                    android:id="@+id/feature_2" />
+
+                <include
+                    layout="@layout/item_feature"
+                    android:id="@+id/feature_3" />
+            </LinearLayout>
+
+            <!-- CTA Buttons -->
+            <Button
+                android:id="@+id/btn_get_started"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Get Started →"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/btn_red_ripple"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btn_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Sign In"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                style="@style/Button.Ghost"
+                android:layout_marginBottom="32dp" />
+        </LinearLayout>
+
+        <!-- Stats Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:marginStart="24dp"
+            android:marginEnd="24dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:paddingVertical="16dp">
-                <TextView
-                    android:layout_width="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#0DFFFFFF"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="50K+"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Athletes"
-                    android:textColor="#80FFFFFF"
-                    android:textSize="11sp" />
-            </LinearLayout>
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50K+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Athletes"
+                        android:textColor="@color/white_40"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <View
-                android:layout_width="1dp"
+                android:layout_width="2dp"
                 android:layout_height="match_parent"
-                android:background="#33FFFFFF" />
+                android:background="@color/white_10" />
 
-            <!-- Workouts -->
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:paddingVertical="16dp">
-                <TextView
-                    android:layout_width="wrap_content"
+                app:cardCornerRadius="0dp"
+                app:cardBackgroundColor="#0DFFFFFF"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="2M+"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Workouts"
-                    android:textColor="#80FFFFFF"
-                    android:textSize="11sp" />
-            </LinearLayout>
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2M+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Workouts"
+                        android:textColor="@color/white_40"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="#33FFFFFF" />
+            <View android:layout_width="2dp" android:layout_height="match_parent" android:background="@color/white_10" />
 
-            <!-- Rating -->
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:paddingVertical="16dp">
-                <TextView
-                    android:layout_width="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#0DFFFFFF"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="4.9★"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rating"
-                    android:textColor="#80FFFFFF"
-                    android:textSize="11sp" />
-            </LinearLayout>
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.9★"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rating"
+                        android:textColor="@color/white_40"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
     </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+</ScrollView>

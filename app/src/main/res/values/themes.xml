@@ -3,7 +3,105 @@
     <style name="Base.Theme.HIITMasterApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/fit_red</item>
+        <item name="colorPrimaryVariant">@color/fit_red_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/fit_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/fit_dark</item>
+        <item name="android:statusBarColor">@color/fit_dark</item>
+        <item name="android:navigationBarColor">@color/fit_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
-    <style name="Theme.HIITMasterApp" parent="Base.Theme.HIITMasterApp" />
+    <!-- Text Styles -->
+    <style name="TextStyle.Display" parent="">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="TextStyle.Headline" parent="">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+
+    <style name="TextStyle.Title" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.Body" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white_80</item>
+    </style>
+
+    <style name="TextStyle.Caption" parent="">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/white_40</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="TextStyle.Label.Caps" parent="">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/white_40</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="Button.FitRed" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/fit_red</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="rippleColor">@color/fit_red_dark</item>
+    </style>
+
+    <style name="Button.FitBlue" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/fit_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="Button.Ghost" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="strokeColor">@color/white_20</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="Card.FitDark" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/fit_dark_card</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/white_10</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Bottom Navigation -->
+    <style name="BottomNav.FitTrack" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/fit_dark_surface</item>
+        <item name="itemIconTint">@drawable/bottom_nav_icon_tint</item>
+        <item name="itemTextColor">@drawable/bottom_nav_icon_tint</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
 </resources>
