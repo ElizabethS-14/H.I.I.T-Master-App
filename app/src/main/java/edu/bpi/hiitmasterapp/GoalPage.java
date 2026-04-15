@@ -3,6 +3,7 @@ package edu.bpi.hiitmasterapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -23,7 +24,7 @@ public class GoalPage extends AppCompatActivity {
 
     Spinner Goal3_Op;
 
-    ImageView imageView;
+    Button imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +32,15 @@ public class GoalPage extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_goal_page);
 
-        imageView = (ImageView) findViewById(R.id.imageView);
-        Goal1_Op = (Spinner)findViewById(R.id.Goal1_Op);
-        Goal2_Op = (Spinner)findViewById(R.id.Goal2_Op);
-        Goal3_Op = (Spinner)findViewById(R.id.Goal3_Op);
+        imageView = (Button) findViewById(R.id.btn_continue);
+        //Goal1_Op = (Spinner)findViewById(R.id.Goal1_Op);
+        //Goal2_Op = (Spinner)findViewById(R.id.Goal2_Op);
+        //Goal3_Op = (Spinner)findViewById(R.id.Goal3_Op);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GoalPage.this, MainActivity.class);
+                Intent intent = new Intent(GoalPage.this, Dashboard.class);
                 startActivity(intent);
             }
         });

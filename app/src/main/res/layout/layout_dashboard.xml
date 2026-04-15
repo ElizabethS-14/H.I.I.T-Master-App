@@ -361,6 +361,7 @@
                         </LinearLayout>
 
                         <androidx.cardview.widget.CardView
+                            android:id="@+id/to_workoutoftheday_page"
                             android:layout_width="56dp"
                             android:layout_height="56dp"
                             app:cardCornerRadius="16dp"

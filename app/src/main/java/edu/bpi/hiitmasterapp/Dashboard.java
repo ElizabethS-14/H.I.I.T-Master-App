@@ -8,11 +8,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 
 public class Dashboard extends AppCompatActivity {
 
-    ImageButton imagebutton;
+    CardView workoutoftheDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +21,10 @@ public class Dashboard extends AppCompatActivity {
         //EdgeToEdge.enable(this);
         setContentView(R.layout.layout_dashboard);
 
-        imagebutton = (ImageButton) findViewById(R.id.imageButton);
+        workoutoftheDay = (CardView) findViewById(R.id.to_workoutoftheday_page);
 
 
-        imagebutton.setOnClickListener(new View.OnClickListener() {
+        workoutoftheDay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Dashboard.this, Workouts.class);
