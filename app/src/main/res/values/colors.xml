@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <!-- FitTrack Brand Colors -->
+
     <color name="fit_red">#E53935</color>
     <color name="fit_red_dark">#B71C1C</color>
     <color name="fit_red_light">#EF9A9A</color>
@@ -17,6 +15,7 @@
     <color name="fit_dark_card">#1E1E1E</color>
     <color name="fit_dark_elevated">#252525</color>
 
+    <color name="white">#FFFFFF</color>
     <color name="white_80">#CCFFFFFF</color>
     <color name="white_60">#99FFFFFF</color>
     <color name="white_40">#66FFFFFF</color>
@@ -28,6 +27,6 @@
     <color name="orange_accent">#FF9800</color>
     <color name="purple_accent">#9C27B0</color>
 
-    <!-- Status bar & navigation -->
+    <!-- navigation -->
     <color name="status_bar_color">#0F0F0F</color>
 </resources>

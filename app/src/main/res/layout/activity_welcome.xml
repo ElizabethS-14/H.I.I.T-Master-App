@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -38,7 +39,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FitTrack"
+                android:text="H.I.I.T MASTER"
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 android:textStyle="bold"
@@ -102,25 +103,16 @@
                 android:orientation="vertical"
                 android:layout_marginBottom="40dp">
 
-                <include
-                    layout="@layout/item_feature"
-                    android:id="@+id/feature_1" />
-
-
-                <include
-                    layout="@layout/item_feature"
-                    android:id="@+id/feature_2" />
-
-                <include
-                    layout="@layout/item_feature"
-                    android:id="@+id/feature_3" />
+                <include layout="@layout/item_feature" android:id="@+id/feature_1" />
+                <include layout="@layout/item_feature" android:id="@+id/feature_2" />
+                <include layout="@layout/item_feature" android:id="@+id/feature_3" />
             </LinearLayout>
 
             <!-- CTA Buttons -->
             <Button
                 android:id="@+id/btn_get_started"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:text="Get Started →"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -130,14 +122,14 @@
 
             <Button
                 android:id="@+id/btn_sign_in"
+                style="@style/Button.Ghost"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
                 android:text="Sign In"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                style="@style/Button.Ghost"
-                android:layout_marginBottom="32dp" />
+                android:textStyle="bold" />
         </LinearLayout>
 
         <!-- Stats Bar -->
@@ -180,10 +172,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:background="@color/white_10" />
+            <View android:layout_width="2dp" android:layout_height="match_parent" android:background="@color/white_10" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"

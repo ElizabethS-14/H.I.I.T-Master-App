@@ -2,28 +2,52 @@
     <string name="app_name">HIIT Master App</string>
     <string name="underlined_text_string">This is an <u>underlined</u> text.</string>
     <!--This is the first drop down mention-->
-    <string name="option1_name">goal1DropDown</string>
-    <string-array name="Goal1">
-        <item>Option1</item>
-        <item>Option2</item>
-        <item>Option3</item>
-        <item>Option4</item>
-    </string-array>
-    <!--This is the second drop down mention-->
-    <string name="option2_name">goal2DropDown</string>
-    <string-array name="Goal2">
-        <item>Option1</item>
-        <item>Option2</item>
-        <item>Option3</item>
-        <item>Option4</item>
-    </string-array>
+    <string name="welcome_tagline">Train Smarter.\nPush Harder.</string>
+    <string name="welcome_subtitle">The only fitness companion you\'ll ever need. Build strength, track progress, and crush every goal.</string>
+    <string name="get_started">Get Started</string>
+    <string name="sign_in">Sign In</string>
+    <string name="feature_plans">Personalized workout plans</string>
+    <string name="feature_tracking">Track every rep &amp; set</string>
+    <string name="feature_analytics">Real-time progress analytics</string>
+    <string name="stat_athletes">50K+\nAthletes</string>
+    <string name="stat_workouts">2M+\nWorkouts</string>
+    <string name="stat_rating">4.9★\nRating</string>
 
-    <!--This is the third drop down mention-->
-    <string name="option3_name">goal2DropDown</string>
-    <string-array name="Goal3">
-        <item>Option1</item>
-        <item>Option2</item>
-        <item>Option3</item>
-        <item>Option4</item>
-    </string-array>
+    <!-- Goals -->
+    <string name="goals_title">What are you training for?</string>
+    <string name="goals_subtitle">Define your 3 goals to personalise your experience.</string>
+    <string name="set_your_goals">Set Your Goals</string>
+    <string name="continue_to_dashboard">Continue to Dashboard</string>
+    <string name="select_all_goals">Select all 3 goals to continue</string>
+
+    <!-- Dashboard -->
+    <string name="good_morning">Good morning,</string>
+    <string name="weekly_goal">Weekly Goal</string>
+    <string name="your_goals">Your Goals</string>
+    <string name="today_plan">Today\'s Plan</string>
+    <string name="push_day">Push Day</string>
+    <string name="recent_activity">Recent Activity</string>
+    <string name="see_all">See all</string>
+    <string name="edit">Edit</string>
+
+    <!-- Workout -->
+    <string name="start_workout">Start Workout</string>
+    <string name="active">Active</string>
+    <string name="complete_set">Complete Set</string>
+    <string name="rest">Rest</string>
+    <string name="skip">Skip</string>
+
+    <!-- Nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_workouts">Workouts</string>
+    <string name="nav_goals">Goals</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Profile -->
+    <string name="account">Account</string>
+    <string name="profile">Profile</string>
+    <string name="active_goals">Active Goals</string>
+    <string name="notifications">Notifications</string>
+    <string name="preferences">Preferences</string>
+    <string name="privacy">Privacy</string>
 </resources>

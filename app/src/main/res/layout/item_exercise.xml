@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_card_dark"
+    android:layout_marginBottom="10dp">
+
+    <!-- Done indicator / Number -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_indicator"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#1AFFFFFF"
+        app:cardElevation="0dp"
+        android:layout_marginEnd="14dp">
+
+        <TextView
+            android:id="@+id/tv_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:textColor="@color/white_40"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_exercise_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bench Press"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_exercise_meta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4 sets · 8–10 reps · Rest 90s"
+            android:textColor="@color/white_40"
+            android:textSize="11sp"
+            android:layout_marginTop="3dp" />
+    </LinearLayout>
+
+    <!-- Muscle tag + chevron -->
+    <TextView
+        android:id="@+id/tv_muscle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chest"
+        android:textColor="@color/white_40"
+        android:textSize="11sp"
+        android:layout_marginEnd="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="›"
+        android:textColor="@color/white_20"
+        android:textSize="18sp" />
+
+</LinearLayout>

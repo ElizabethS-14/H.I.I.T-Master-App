@@ -2,13 +2,9 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1A1A2E"
-    android:fillViewport="true">
-
-
+    android:background="@color/fit_dark">
 
     <!-- Scrollable Content -->
     <androidx.core.widget.NestedScrollView
@@ -176,13 +172,12 @@
                                 android:id="@+id/btn_edit_goals"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:clickable="true"
-                                android:focusable="true"
                                 android:text="Edit ›"
                                 android:textColor="@color/fit_blue"
-                                android:textSize="12dp"
+                                android:textSize="12sp"
                                 android:textStyle="bold"
-                                tools:ignore="TouchTargetSizeCheck" />
+                                android:clickable="true"
+                                android:focusable="true" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -361,7 +356,6 @@
                         </LinearLayout>
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/to_workoutoftheday_page"
                             android:layout_width="56dp"
                             android:layout_height="56dp"
                             app:cardCornerRadius="16dp"
@@ -425,7 +419,5 @@
         app:itemTextColor="@drawable/bottom_nav_icon_tint"
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="labeled" />
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
