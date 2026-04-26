@@ -57,7 +57,7 @@ public class UserGoals {
      */
     public static UserGoals load(Context context) {
         //Clear Test
-        //UserGoals.clear(context);
+        UserGoals.clear(context);
         SharedPreferences prefs = context
                 .getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         return new UserGoals(

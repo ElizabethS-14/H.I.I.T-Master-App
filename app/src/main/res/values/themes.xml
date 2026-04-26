@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.HIITMasterApp." parent="Theme.MaterialComponents.NoActionBar">
+    <style name="Base.Theme.HIITMasterApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/fit_red</item>
         <item name="colorPrimaryVariant">@color/fit_red_dark</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -13,6 +13,8 @@
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
+
+    <style name="Theme.HIITMasterApp" parent="Base.Theme.HIITMasterApp" />
 
     <!-- Text Styles -->
     <style name="TextStyle.Display" parent="">
