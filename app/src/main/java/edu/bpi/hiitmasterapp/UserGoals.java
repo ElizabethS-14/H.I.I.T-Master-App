@@ -9,14 +9,14 @@ import android.content.SharedPreferences;
  */
 public class UserGoals {
 
-    private static final String PREFS_NAME      = "fittrack_goals";
+    private static final String PREFS_NAME      = "hittmaster_user_goals";
     private static final String KEY_FITNESS     = "Fitness Goal";
     private static final String KEY_COMMITMENT  = "Weekly Commitment";
     private static final String KEY_LEVEL       = "Experience Level";
 
-    private String fitnessGoal;
-    private String weeklyCommitment;
-    private String experienceLevel;
+    private final String fitnessGoal;
+    private final String weeklyCommitment;
+    private final String experienceLevel;
 
     public UserGoals(String fitnessGoal, String weeklyCommitment, String experienceLevel) {
         this.fitnessGoal      = fitnessGoal;

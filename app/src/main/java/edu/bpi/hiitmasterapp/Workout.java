@@ -6,13 +6,13 @@ package edu.bpi.hiitmasterapp;
  */
 public class Workout {
 
-    private int id;
-    private String name;
-    private String muscleTag;
-    private String duration;
-    private int calories;
-    private int exerciseCount;
-    private int colorResId; // background color resource for the icon card
+    private final int id;
+    private final String name;
+    private final String muscleTag;
+    private final String duration;
+    private final int calories;
+    private final int exerciseCount;
+    private final int colorResId; // background color resource for the icon card
 
     public Workout(int id, String name, String muscleTag,
                    String duration, int calories, int exerciseCount, int colorResId) {

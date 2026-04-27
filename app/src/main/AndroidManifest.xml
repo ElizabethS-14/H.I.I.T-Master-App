@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.HIITMasterApp">
         <activity
+            android:name=".temp"
+            android:exported="false" />
+        <activity
             android:name=".UserDetails"
             android:exported="false" />
         <activity

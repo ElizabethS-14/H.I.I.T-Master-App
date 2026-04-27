@@ -6,10 +6,10 @@ package edu.bpi.hiitmasterapp;
  */
 public class RecentWorkout {
 
-    private String name;
-    private String duration;
-    private int calories;
-    private String dateLabel; // e.g. "Today", "Yesterday", "Mon"
+    private final String name;
+    private final String duration;
+    private final int calories;
+    private final String dateLabel; // e.g. "Today", "Yesterday", "Mon"
 
     public RecentWorkout(String name, String duration, int calories, String dateLabel) {
         this.name = name;

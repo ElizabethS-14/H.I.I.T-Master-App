@@ -6,14 +6,14 @@ package edu.bpi.hiitmasterapp;
  */
 public class Exercise {
 
-    private int id;
-    private String name;
-    private int sets;
-    private String reps;       // e.g. "8–10" (detail view display)
+    private final int id;
+    private final String name;
+    private final int sets;
+    private final String reps;       // e.g. "8–10" (detail view display)
     private int repsValue;     // numeric reps used in active workout adjusters
     private int weightKg;      // starting weight in kg
-    private String rest;       // e.g. "90s"
-    private String muscleGroup;
+    private final String rest;       // e.g. "90s"
+    private final String muscleGroup;
     private boolean completed;
 
     public Exercise(int id, String name, int sets, String reps,

@@ -17,16 +17,9 @@ import edu.bpi.hiitmasterapp.DataRepository;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * GoalsActivity — mirrors Goals.jsx
- * Lets the user pick 3 goals via in-card dropdowns.
- * Saves to SharedPreferences (≡ localStorage) and navigates to Dashboard.
- */
 public class GoalsActivity extends AppCompatActivity {
 
-    // -----------------------------------------------------------------------
-    // Option data — mirrors goalOptions in Goals.jsx (sourced from DataRepository)
-    // -----------------------------------------------------------------------
+
     private static List<String> FITNESS_OPTIONS;
     private static List<String> COMMITMENT_OPTIONS;
     private static List<String> LEVEL_OPTIONS;
@@ -46,10 +39,6 @@ public class GoalsActivity extends AppCompatActivity {
     private TextView tvHint;
     private View    dot1, dot2, dot3;
 
-    // -----------------------------------------------------------------------
-    // Lifecycle
-    // -----------------------------------------------------------------------
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,10 +54,6 @@ public class GoalsActivity extends AppCompatActivity {
         updateContinueState();
     }
 
-    // -----------------------------------------------------------------------
-    // View binding
-    // -----------------------------------------------------------------------
-
     private void bindViews() {
         btnContinue = findViewById(R.id.btn_continue);
         tvHint      = findViewById(R.id.tv_hint);
@@ -78,38 +63,28 @@ public class GoalsActivity extends AppCompatActivity {
 
         btnContinue.setOnClickListener(v -> saveAndContinue());
     }
-
-    // -----------------------------------------------------------------------
-    // Goal card setup
-    // -----------------------------------------------------------------------
-
     private void setupGoalCards() {
         cardFitness = new GoalCardController(
-                (View) findViewById(R.id.card_fitness_goal),
+                findViewById(R.id.card_fitness_goal),
                 "GOAL 1", "Fitness Goal",
                 FITNESS_OPTIONS,
                 value -> { selectedFitness = value; updateContinueState(); }
         );
 
         cardCommitment = new GoalCardController(
-                (View) findViewById(R.id.card_commitment),
+                findViewById(R.id.card_commitment),
                 "GOAL 2", "Weekly Commitment",
                 COMMITMENT_OPTIONS,
                 value -> { selectedCommitment = value; updateContinueState(); }
         );
 
         cardLevel = new GoalCardController(
-                (View) findViewById(R.id.card_level),
+                findViewById(R.id.card_level),
                 "GOAL 3", "Experience Level",
                 LEVEL_OPTIONS,
                 value -> { selectedLevel = value; updateContinueState(); }
         );
     }
-
-    // -----------------------------------------------------------------------
-    // State management — mirrors allSelected / progress dots in Goals.jsx
-    // -----------------------------------------------------------------------
-
     private void updateContinueState() {
         boolean allSelected = !selectedFitness.isEmpty()
                 && !selectedCommitment.isEmpty()
@@ -124,7 +99,6 @@ public class GoalsActivity extends AppCompatActivity {
         setDotActive(dot2, !selectedCommitment.isEmpty());
         setDotActive(dot3, !selectedLevel.isEmpty());
     }
-
     private void setDotActive(View dot, boolean active) {
         if (dot == null) return;
         dot.setBackgroundResource(active ? R.drawable.circle_blue : R.drawable.circle_dim);
@@ -132,45 +106,25 @@ public class GoalsActivity extends AppCompatActivity {
         params.width = active ? dpToPx(24) : dpToPx(8);
         dot.setLayoutParams(params);
     }
-
-    // -----------------------------------------------------------------------
-    // Navigation
-    // -----------------------------------------------------------------------
-
     private void saveAndContinue() {
         if (selectedFitness.isEmpty() || selectedCommitment.isEmpty() || selectedLevel.isEmpty()) return;
 
         UserGoals goals = new UserGoals(selectedFitness, selectedCommitment, selectedLevel);
         goals.save(this);
 
-        Intent intent = new Intent(this, DashboardActivity.class);
+        Intent intent = new Intent(this, UserDetails.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         finish();
     }
-
-    // -----------------------------------------------------------------------
-    // Helper
-    // -----------------------------------------------------------------------
-
     private int dpToPx(int dp) {
         float density = getResources().getDisplayMetrics().density;
         return Math.round(dp * density);
     }
-
-    // -----------------------------------------------------------------------
-    // Inner class: manages one goal card (dropdown logic)
-    // -----------------------------------------------------------------------
-
     interface OnOptionSelected {
         void onSelected(String value);
     }
-
-    /**
-     * GoalCardController manages the expand/collapse dropdown for a single goal card.
-     * Mirrors the GoalCard component in Goals.jsx.
-     */
     static class GoalCardController {
 
         private final View             rootCard;
