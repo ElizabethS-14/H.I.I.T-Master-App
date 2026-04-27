@@ -25,16 +25,14 @@ import java.util.List;
  */
 public class DashboardActivity extends AppCompatActivity {
 
-    // AI coach messages — mirrors dashboardSpeakerLines in Dashboard.jsx
+
     private static final String[] AI_LINES = DataRepository.getDashboardAiLines();
 
     private int aiLineIndex = 0;
     private final Handler aiHandler = new Handler();
     private Runnable aiRunnable;
 
-    // -----------------------------------------------------------------------
-    // Lifecycle
-    // -----------------------------------------------------------------------
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,9 +59,7 @@ public class DashboardActivity extends AppCompatActivity {
         if (aiRunnable != null) aiHandler.removeCallbacks(aiRunnable);
     }
 
-    // -----------------------------------------------------------------------
-    // Goals section — mirrors userGoals in Dashboard.jsx
-    // -----------------------------------------------------------------------
+
 
     private void setupGoalsSection() {
         UserGoals goals = UserGoals.load(this);
@@ -105,9 +101,7 @@ public class DashboardActivity extends AppCompatActivity {
         }
     }
 
-    // -----------------------------------------------------------------------
-    // Recent workouts RecyclerView — mirrors recentWorkouts in Dashboard.jsx
-    // -----------------------------------------------------------------------
+
 
     private void setupRecentWorkouts() {
         List<RecentWorkout> workouts = DataRepository.getRecentWorkouts();
@@ -120,9 +114,7 @@ public class DashboardActivity extends AppCompatActivity {
         rv.setNestedScrollingEnabled(false);
     }
 
-    // -----------------------------------------------------------------------
-    // Today's Workout card — navigates to WorkoutDetailActivity
-    // -----------------------------------------------------------------------
+
 
     private void setupTodayWorkoutCard() {
         View card = findViewById(R.id.card_today_workout);
@@ -132,9 +124,6 @@ public class DashboardActivity extends AppCompatActivity {
         }
     }
 
-    // -----------------------------------------------------------------------
-    // Bottom Navigation — shared across Dashboard, Workouts, Goals, Profile
-    // -----------------------------------------------------------------------
 
     private void setupBottomNav() {
         BottomNavigationView nav = findViewById(R.id.bottom_nav);
@@ -156,9 +145,7 @@ public class DashboardActivity extends AppCompatActivity {
         overridePendingTransition(0, 0);
     }
 
-    // -----------------------------------------------------------------------
-    // AI Coach message cycling — mirrors AISpeaker typewriter in Dashboard.jsx
-    // -----------------------------------------------------------------------
+
 
     private void startAICoachCycle() {
         TextView tvAI = findViewById(R.id.tv_ai_message);

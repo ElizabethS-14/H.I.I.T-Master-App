@@ -283,21 +283,21 @@
                     android:orientation="horizontal"
                     android:layout_marginBottom="14dp">
 
-                    <include layout="@layout/item_stat_card"
+                    <include layout="@layout/item_stat_card_cal"
                         android:id="@+id/stat_calories"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginEnd="8dp" />
 
-                    <include layout="@layout/item_stat_card"
+                    <include layout="@layout/item_stat_card_act"
                         android:id="@+id/stat_active"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginEnd="8dp" />
 
-                    <include layout="@layout/item_stat_card"
+                    <include layout="@layout/item_stat_card_sess"
                         android:id="@+id/stat_sessions"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
