@@ -44,6 +44,10 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.database)
+    implementation("androidx.credentials:credentials:1.6.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.6.0")
+    implementation("com.google.android.libraries.identity.googleid:googleid:<latest version>")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.31")
